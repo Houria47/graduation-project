@@ -1,0 +1,859 @@
+.rest-profile {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-color: #f9f9f9;
+}
+@media (min-width: 1210px) {
+  .rest-profile .mycontainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 15px;
+  }
+}
+.section-title {
+  text-align: center;
+  padding: 5px 0;
+  font-size: 20px;
+  background-color: white;
+  border: 0.2px solid #ccc;
+}
+.rest-profile .main {
+  background-color: white;
+  box-shadow: -1px -1px 10px #ccc;
+  height: fit-content;
+}
+@media (max-width: 767px) {
+  .rest-profile .mycontainer {
+    padding: 0;
+  }
+}
+@media (max-width: 1220px) {
+  .rest-profile .recipes,
+  .rest-profile .menus {
+    display: none;
+  }
+}
+/* start recipes section */
+.recipes ul li {
+  background-color: white;
+  padding: 10px 15px;
+  border: 0.2px solid #ccc;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+.recipes ul li:hover {
+  box-shadow: 0 2px 10px #aaa;
+}
+
+.recipes ul li h2 {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  margin: 0 0 5px;
+}
+.recipes ul li .ratings {
+  margin: 5px auto;
+}
+.recipes ul li img {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 6px;
+  display: block;
+  margin: 10px auto;
+  transition: 0.3s;
+}
+.recipes li.not-available img {
+  filter: grayscale(0.5);
+}
+.recipes ul li:hover img {
+  transform: scale(1.1);
+}
+.recipes ul li .details {
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 5px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.recipes .details .prices span:first-child {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--sec-color);
+}
+.recipes .details .prices span:last-child {
+  font-size: 12px;
+  color: var(--main-color);
+  text-decoration: line-through;
+}
+.recipes .details .prices .unit {
+  margin: 0;
+  font-size: 10;
+}
+.recipes .details button {
+  border: 1px solid var(--sec-color);
+  border-radius: 6px;
+  color: var(--main-color);
+  position: relative;
+}
+.recipes li.cant-order .details button {
+  color: #fc2216;
+  border-color: #fc2216;
+  font-size: 12px;
+}
+.recipes .details button::before {
+  position: absolute;
+  content: "+1";
+  color: white;
+  background-color: var(--sec-color);
+  border: 2px solid var(--main-color);
+  padding: 0 2px;
+  border-radius: 50%;
+  font-size: 10px;
+  bottom: 50%;
+  opacity: 0;
+  transition: 0.3s;
+}
+.recipes .details button.plus::before {
+  animation: plus 0.5s linear;
+}
+@keyframes plus {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    bottom: calc(50% + 20px);
+  }
+  90% {
+    opacity: 1;
+    bottom: calc(50% + 23px);
+  }
+  100% {
+    opacity: 0;
+    bottom: calc(50% + 25px);
+  }
+}
+/* end recipes section */
+/* Start Main Section */
+.main .head {
+  position: relative;
+}
+.main .head .cover img,
+.main .head .logo img,
+.main .head .logo .logo-box {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main .head .logo .logo-box {
+  position: relative;
+}
+.main .head .cover {
+  height: 250px;
+}
+.main .head .logo {
+  position: absolute;
+  right: 25px;
+  transform: translateY(-55%);
+  width: 140px;
+  height: 140px;
+}
+.main .head .logo img {
+  box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18);
+  border-radius: 50%;
+}
+.main .head .logo .openNow {
+  position: absolute;
+  background-color: var(--sec-color);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  bottom: 4px;
+  right: 12px;
+  border: 2px solid #fff;
+}
+.main .head .name {
+  margin-right: 190px;
+  margin-top: 10px;
+}
+.main .head .logo .openNow.close {
+  color: var(--main-color);
+}
+.main .head .name h1 {
+  font-size: 20px;
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  color: var(--text-color-1);
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+.main .head .name .openNow {
+  font-size: 11px;
+  color: var(--sec-color);
+  cursor: context-menu;
+}
+.main .head .name .openNow.close {
+  color: var(--main-color);
+}
+.main .content {
+  padding-inline: 30px;
+}
+
+@media (max-width: 767px) {
+  .main .content {
+    padding-inline: 10px;
+  }
+}
+.main .rinfo {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.main .rinfo p {
+  font-size: 13px;
+  color: var(--text-color-1);
+  font-weight: 600;
+  margin: 0 0 5px;
+}
+.main .rinfo i {
+  margin-left: 5px;
+}
+.main .rinfo .reserv-link {
+  padding: 5px 30px;
+  color: white;
+  background-color: var(--text-color-1);
+  border: 1px solid var(--text-color-1);
+  font-size: 13px;
+  transition: 0.3s;
+}
+.main .rinfo .reserv-link:hover {
+  background-color: white;
+  color: var(--text-color-1);
+}
+.main .services,
+.main .main-content,
+.main .rates-reviews {
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+.main .info-title {
+  font-size: 19px;
+  color: var(--text-color-1);
+  font-weight: bold;
+}
+.main .services .services-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.main .services .service {
+  flex: 1;
+  text-align: center;
+}
+.main .services .service h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-color-1);
+}
+.main .services .service img {
+  width: 60px;
+  width: 60px;
+  margin: 5px 0;
+}
+.main .services .service p {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+/* rate chart customization */
+@media (min-width: 1220px) {
+  .rate-content {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+.rate-content .rate-numbers .rate-percentage {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color-1);
+}
+.rate-content .full-stars {
+  color: gold;
+}
+.rate-content .ratings {
+  font-size: 12px;
+}
+.rate-content .rated-users-num {
+  font-size: 12px;
+}
+.rate-content .rate-bar {
+  gap: 10px;
+  margin-bottom: 0;
+}
+.rate-content .rate-bar span {
+  font-size: 12px;
+}
+.rate-content .rate-bar--inner {
+  height: 7px;
+}
+.rate-content .rate-bar--inner {
+  background-color: rgba(130, 255, 174, 0.531);
+}
+.main .rates-reviews ul {
+  margin-top: 20px;
+  height: 60px;
+  overflow: hidden;
+  transition: 1s;
+}
+.main .rates-reviews ul.active {
+  height: fit-content;
+  /* max-height: 100vh;
+  overflow-y: auto; */
+}
+.main .rates-reviews li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.main .rates-reviews li:not(:last-child) {
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.main .rates-reviews img {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+}
+.main .rates-reviews li h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-color-1);
+  margin: 0 0 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.main .rates-reviews li h3 i {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  padding: 1px 5px;
+  border: 1px solid gold;
+  border-radius: 6px;
+  background-color: #f1f1f1;
+  color: gold;
+}
+.main .rates-reviews li h3 i::before {
+  font-size: 11px;
+}
+.main .rates-reviews li p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+.show-reviews-btn {
+  width: 100%;
+  height: 40px;
+  color: #666;
+  font-size: 13px;
+  border: none;
+  background-image: linear-gradient(#fff, #eee);
+  transition: 0.3s;
+}
+.show-reviews-btn:hover {
+  background-image: linear-gradient(#fff, #27ae5f34);
+}
+.main .rate-rest {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  text-align: center;
+}
+@media (max-width: 1220px) {
+  .main .rate-rest {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+}
+.main .rate-rest img {
+  width: 200px;
+  height: auto;
+}
+.main .rate-rest p {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  color: var(--main-color);
+}
+.main .rate-rest button {
+  padding: 5px;
+  border: none;
+  background-color: var(--sec-color);
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--sec-color);
+  transition: 0.3s;
+}
+.main .rate-rest button i {
+  color: gold;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+.main .rate-rest button span {
+  padding: 5px 10px;
+  background-color: white;
+  border-radius: 15px;
+  font-size: 13px;
+  color: var(--text-color-1);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: 0.3s;
+}
+.main .rate-rest button:hover span {
+  background-color: var(--sec-color);
+  color: white;
+}
+.main .rate-rest button:hover {
+  background-color: white;
+}
+.main .rate-rest button:hover i {
+  color: var(--sec-color);
+}
+.main .main-content .mob-head {
+  display: none;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.main .main-content .mob-head > div.active {
+  background-color: var(--text-color-1);
+  color: white;
+}
+.main .main-content .mob-head > div {
+  font-weight: bold;
+  flex: 1;
+  border: 1px solid #eee;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+@media (max-width: 1220px) {
+  .main .main-content .mob-head {
+    display: flex;
+  }
+  .main .main-content .info-title {
+    display: none;
+  }
+}
+.main .main-content ul {
+  max-width: 100%;
+}
+.main .main-content ul li.post {
+  max-width: 100%;
+  box-shadow: 0px 0px 8px #eee;
+  margin-bottom: 15px;
+}
+.main .main-content ul li .media-container {
+  max-width: 500px;
+  margin: 0 auto;
+  direction: ltr;
+}
+.main .main-content ul li .media-container img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+/* slider start */
+.main .main-content ul li .media-container .slick-prev::before {
+  content: "\f104";
+}
+.main .main-content ul li .media-container .slick-next::before {
+  content: "\f105";
+}
+.main .main-content ul li .media-container .slick-arrow {
+  z-index: 2;
+}
+.main .main-content ul li .media-container .slick-arrow::before {
+  font-family: var(--fa-style-family-classic);
+  font-weight: 900;
+  opacity: 0;
+  transition: 0.3s;
+}
+@media (max-width: 767px) {
+  .main .main-content ul li .media-container .slick-arrow::before {
+    opacity: 1;
+  }
+}
+.main .main-content ul li .media-container:hover .slick-arrow::before {
+  opacity: 1;
+}
+.main .main-content ul li .media-container .slick-prev {
+  left: 5px;
+}
+.main .main-content ul li .media-container .slick-next {
+  right: 5px;
+}
+.main .main-content ul li .media-container .slick-dots {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  width: fit-content;
+  margin: auto;
+  z-index: 2;
+}
+.main .main-content ul li .media-container .slick-dots button::before {
+  color: #fff;
+}
+.main .main-content ul li .media-container .slick-dots li {
+  margin: 0;
+}
+.main .main-content ul li .media-container .slick-dots::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  left: 50%;
+  bottom: 5px;
+  transform: translateX(-50%);
+}
+.main .main-content ul li .media-container:hover .slick-dots::before {
+  background-color: rgba(0 0 0 /50%);
+}
+/* slider End */
+.main .main-content ul li .content {
+  padding: 10px;
+}
+.main .main-content ul li .date {
+  font-size: 14px;
+  color: #777;
+  text-align: left;
+}
+.main .main-content ul li .caption {
+  margin-bottom: 0px;
+  color: var(--text-color-1);
+}
+.main .main-content ul li .actions {
+  padding: 0 10px;
+  font-size: 15px;
+}
+.main .main-content ul li .activities {
+  padding: 0 0 5px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+  color: var(--text-color-1);
+}
+.main .main-content ul li .activities i,
+.main .main-content ul li .activities span {
+  margin-right: 5px;
+}
+.main .main-content ul li .activities .commetns {
+  cursor: pointer;
+}
+.main .main-content ul li .activities img {
+  width: 20px;
+  height: 20px;
+}
+.main .main-content ul li .activities img:not(:first-child) {
+  margin-right: -5px;
+}
+.main .main-content ul li .actions button {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #666;
+  padding: 10px;
+  margin-bottom: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+.main .main-content ul li .actions button:first-child {
+  border-left: 1px solid #eee;
+}
+.main .main-content ul li .actions button:hover,
+.main .main-content ul li .actions button.active {
+  background-color: #f2fff7;
+}
+.main .main-content ul li .actions button i {
+  margin-left: 10px;
+}
+.main .main-content ul li .actions button.reacts-btn img {
+  width: 25px;
+  height: 25px;
+}
+.main .main-content ul li .actions button .reacts {
+  position: absolute;
+  right: 10px;
+  top: -30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  background: white;
+  border: 1px solid #ced0d4;
+  border-radius: 50px;
+  padding: 5px 10px;
+  width: fit-content;
+  transition: 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+.main .main-content ul li .actions button.reacts-btn:hover .reacts {
+  opacity: 1;
+  pointer-events: all;
+}
+.main .main-content ul li .actions button.reacts-btn.active {
+  background-color: #f2fff7;
+}
+.main .main-content ul li .actions button .reacts img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main .main-content ul li .actions button .reacts img:hover {
+  transform: scale(1.2);
+}
+/* Comment start */
+.main .post-comments {
+  display: none;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+.main .post-comments h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-color-1);
+}
+.main .post-comments li .comment {
+  box-shadow: 1px 1px 5px #ccc;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.main .post-comments li:not(:last-child) {
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.main .post-comments li .comment img {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+}
+.main .post-comments li .comment > div {
+  flex: 1;
+}
+.main .post-comments li .comment h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-color-1);
+  margin: 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+.main .post-comments li .comment h3 img {
+  width: 20px;
+  height: 20px;
+}
+.main .post-comments li .comment p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+.main .main-content li .reply {
+  background-color: white;
+  box-shadow: 1px 1px 5px #ccc;
+  padding: 5px 10px;
+  margin-right: 50px;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+.main .main-content li .reply a {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 0 5px;
+}
+.main .main-content li .reply p {
+  margin: 0;
+  font-size: 12px;
+  color: #777;
+}
+.main .comments .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+  border-top: 1px solid #c9c9c9;
+  margin-top: 5px;
+}
+.main .comments .actions .btns span {
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 5px;
+  color: var(--third-color);
+}
+.main .comments .actions .btns span:not(:first-child)::before {
+  content: "-";
+  font-size: 10px;
+  margin-left: 10px;
+}
+.main .comments .actions .date {
+  font-size: 12px;
+  color: #777;
+}
+/* Comment End */
+/* comment form */
+.main .comment-form {
+  position: relative;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  overflow: hidden;
+  display: none;
+}
+.main .comment-form input {
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 10px 40px;
+  border: none;
+  font-size: 13px;
+  background-color: #f9f9f9;
+}
+
+.main .comment-form button {
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: var(--sec-color);
+  color: white;
+  left: 0;
+  top: 0;
+  padding: 5px;
+  height: 100%;
+  width: 50px;
+}
+/* End Main Section */
+/* Start Menus Section */
+
+.menus > ul > li {
+  position: relative;
+  margin-top: 5px;
+  background-color: white;
+  text-align: center;
+  border: 0.2px solid #cccccc;
+}
+.menus > ul > li .img-box {
+  overflow: hidden;
+  width: 100%;
+}
+.menus > ul > li .img-box img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.menus > ul > li:hover .img-box img {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.menus > ul > li h3 {
+  color: var(--black);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.menus > ul > li i {
+  font-size: 15px;
+  color: var(--orang);
+}
+
+.menus .menu-lable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.menus .menu-lable:hover {
+  background-color: #f9f9f9;
+}
+
+.menus .menu-lable h3 {
+  color: var(--text-color-1);
+  font-size: 18px;
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  margin: 0;
+}
+.menus .menu-lable i {
+  font-size: 15px;
+  color: var(--main-color);
+}
+.menus .menu-meals {
+  border-top: 0.2px solid #ccc;
+  max-height: 500px;
+  overflow-y: auto;
+}
+.menus .menu-meals {
+  display: none;
+}
+.menus .menu-meals li a {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-bottom: 0.2px solid #ccc;
+  transition: 0.3s;
+}
+.menus .menu-meals li a:hover {
+  background-color: var(--main-color-trans);
+}
+.menus .menu-meals li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 5px;
+}
+.menus .menu-meals li h4 {
+  flex: 1;
+  text-align: right;
+  font-size: 14px;
+  color: var(--third-color);
+  cursor: pointer;
+}
+
+.menus .menu-meals li span {
+  margin: 4px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 2px;
+  font-size: 12px;
+  width: fit-content;
+  font-weight: bold;
+  display: block;
+  padding: 0 5px;
+}
+.menus .menu-meals li.no-meals {
+  padding: 10px;
+  font-size: 13px;
+  color: #777;
+}
+/* End Menus Section */

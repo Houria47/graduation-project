@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@400;500;600&display=swap");
+.unit {
+  font-size: 10px;
+  font-style: italic;
+  margin: 0;
+}
+.cart {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+@media (min-width: 922px) {
+  .cart {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+.cart .rest-carts .my-card {
+  background-color: rgba(255 255 255 /20%);
+}
+/* Start Carts By Restaurant section */
+.cart .rest-carts {
+  overflow: hidden;
+}
+.cart .rest-carts .rest-cart {
+  margin-bottom: 20px;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .cart .rest-carts .rest-cart {
+    padding: 0;
+  }
+}
+.cart .rest-carts .rest-cart::after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  bottom: 0px;
+  right: -50px;
+  background-image: url(./../../../images/cart-bg.png);
+  background-size: cover;
+  filter: blur(1.5px);
+}
+.cart .rest-carts .rest-cart .rest-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  filter: blur(2px);
+  z-index: 1;
+}
+.cart .rest-carts .rest-cart .rest-img img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+.cart .rest-carts .cart-content {
+  background-color: white;
+  padding: 10px 10px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  z-index: 2;
+  position: relative;
+}
+.cart .rest-carts .rest-cart .cart-title {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.cart .rest-carts .rest-cart .cart-title img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--text-color-1);
+  background-color: var(--text-color-1);
+}
+.cart .rest-carts .rest-cart .cart-title h2 {
+  font-size: 18px;
+  background-color: white;
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  font-weight: bold;
+  flex: 1;
+}
+.cart .rest-carts .rest-cart .cart-title a.order-link {
+  color: white;
+  background-color: var(--d-main-color);
+  border: 1px solid var(--d-main-color);
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+.cart .rest-carts .rest-cart .cart-title a.order-link:hover {
+  background-color: white;
+  color: var(--d-main-color);
+}
+.cart .rest-carts .rest-cart .cart-title h2 a {
+  color: var(--sec-color);
+}
+.cart .rest-carts .rest-cart .cart-title h2 a:hover {
+  text-decoration: underline;
+}
+.cart .rest-carts .table-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-block: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.cart .rest-carts table {
+  font-size: 0.9rem;
+  width: 100%;
+}
+.cart .rest-carts table tr {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.cart .rest-carts table tbody tr:focus-within,
+.cart .rest-carts table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+.cart .rest-carts table tbody tr.active {
+  background-color: var(--d-third-color);
+}
+.cart .rest-carts table th {
+  padding: 5px 10px;
+  color: #666;
+}
+.cart .rest-carts table tr:not(:last-child) td {
+  border-bottom: 1px solid #eee;
+}
+.cart .rest-carts table td {
+  color: #777;
+}
+.cart .rest-carts table td:not(:first-child) {
+  padding: 0 10px;
+}
+.cart .rest-carts table td .img-box {
+  position: relative;
+}
+.cart .rest-carts table td .img-box::before {
+  content: "\f1f8";
+  font-family: var(--fa-style-family-classic);
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--orang);
+  cursor: pointer;
+  position: absolute;
+  background-color: rgba(0 0 0 / 50%);
+  opacity: 0;
+  transition: 0.3s;
+}
+.cart .rest-carts table tr:hover .img-box::before {
+  opacity: 1;
+}
+
+.cart .rest-carts table td img {
+  width: 50px;
+  height: 50px;
+}
+.cart .rest-carts table td h3 {
+  font-size: 1rem;
+  margin-right: 10px;
+  display: inline-block;
+}
+.cart .rest-carts table td input {
+  width: 50px;
+  color: inherit;
+  border: 1px solid transparent;
+  outline: none;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.cart .rest-carts table td input:focus,
+.cart .rest-carts table tr:hover td input {
+  border: 1px solid var(--sec-color);
+}
+.cart .rest-carts table :is(td, th):not(:nth-child(2)) {
+  text-align: center;
+  width: 0;
+  white-space: nowrap;
+}
+.cart .rest-carts .total-box {
+  margin-top: 10px;
+  padding-inline: 25px;
+}
+.cart .rest-carts .total-box > div {
+  font-size: 12px;
+  margin: 0;
+}
+.cart .rest-carts .total {
+  border-top: 1px solid #eee;
+  margin-top: 5px;
+}
+.cart .rest-carts h3 {
+  color: var(--text-color-1);
+  font-size: inherit;
+  display: inline-block;
+  min-width: 110px;
+}
+.cart .rest-carts span {
+  margin-right: 5px;
+}
+.cart .rest-carts span.num {
+  color: var(--d-main-color);
+  font-weight: bold;
+}
+
+/* Start Carts By Restaurant section */
+/* Start Overview Section */
+.cart .overview {
+  height: fit-content;
+  position: sticky;
+  top: 10vh;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+@media (max-width: 921px) {
+  .cart .overview {
+    grid-row: 1;
+    position: relative;
+    margin-bottom: 60px;
+  }
+}
+.cart .overview .img-box {
+  width: 100%;
+  height: 200px;
+  background-color: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.cart .overview .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cart .overview .ovreview-title {
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  font-size: 20px;
+  color: var(--d-second-color);
+  margin-block: 15px;
+  text-align: center;
+}
+.cart .view-content {
+  font-size: 15px;
+}
+.cart .view-content .infoo {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.cart .overview .view-content .infoo .label {
+  font-weight: bold;
+  color: var(--text-color-1);
+}
+.cart .view-content .infoo .price > span:first-child {
+  color: var(--d-third-color);
+  font-weight: bold;
+}
+.cart .view-content .price .discount {
+  font-size: 13px;
+  color: var(--d-main-color);
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+.cart .view-content .infoo .price .unit {
+  margin-right: 5px;
+}
+
+.cart .view-content .infoo.rest {
+  margin-top: 10px;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  font-size: 13px;
+}
+.cart .view-content .infoo.rest img {
+  width: 70px;
+  height: 70px;
+}
+.cart .view-content .infoo.rest h3 {
+  font-size: 17px;
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  font-weight: bold;
+}
+.cart .view-content .infoo ul li:before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f041";
+  font-weight: 900;
+  margin-left: 5px;
+}
+/* End Overview Section */
+/* Start empty cart section */
+.empty-cart {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: rgba(255 255 255 /20%);
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.empty-cart h3 {
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  font-weight: bold;
+  color: var(--d-main-color);
+}
+.empty-cart p {
+  color: #777;
+  margin-bottom: 30px;
+}
+.empty-cart a {
+  padding: 10px 20px;
+  background-color: var(--d-second-color);
+  color: white;
+  transition: 0.3s;
+}
+.empty-cart a:hover {
+  filter: brightness(1.3);
+}
+.empty-cart img {
+  width: 400px;
+}
+/* Start empty cart section */

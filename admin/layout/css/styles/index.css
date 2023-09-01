@@ -1,0 +1,548 @@
+.section-title {
+  padding: 20px 30px;
+  background-color: white;
+  color: var(--main-color);
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+body {
+  background-color: #eee;
+  --section-padding: 60px;
+}
+/* start header section */
+.header-section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.header-section .mycontainer {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 921px) {
+  .header-section .mycontainer {
+    flex-direction: column;
+  }
+}
+.header-section ul {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  animation: showAfterDelay 0.5s linear 1s forwards;
+}
+@keyframes showAfterDelay {
+  to {
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+}
+@media (max-width: 921px) {
+  .header-section ul {
+    width: 100%;
+  }
+}
+.header-section ul li {
+  width: 100%;
+}
+.header-section ul li a {
+  padding: 15px 30px;
+  display: block;
+  color: var(--text-color-1);
+  background-color: white;
+  transition: 0.3s;
+  opacity: 0;
+  animation: fadeInUp 0.5s linear forwards;
+}
+.header-section ul li a:hover {
+  background-color: #f9f9f9;
+}
+.header-section ul li:not(:last-child) a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.header-section ul li a i {
+  color: var(--third-color);
+  margin-left: 5px;
+  width: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+.header-section ul li a:hover i {
+  color: var(--main-color);
+}
+/* start slider */
+.header-section .header-slider {
+  width: calc(50% - 40px);
+  direction: ltr;
+  flex: 2;
+}
+
+@media (max-width: 921px) {
+  .header-section .header-slider {
+    width: 100%;
+  }
+}
+.slick-list,
+.slick-track {
+  height: 100%;
+}
+.header-section .header-slider .slide {
+  position: relative;
+  height: 100%;
+  padding: 50px;
+  min-height: 350px;
+}
+.header-section .header-slider .slide .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.header-section .header-slider .content {
+  background-color: rgba(248, 209, 179, 0.7);
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  direction: rtl;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.header-section .header-slider .content p {
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: var(--text-color-1);
+  text-align: center;
+}
+.header-section .header-slider .content a {
+  padding: 5px 15px;
+  background-color: transparent;
+  border: 2px solid var(--text-color-1);
+  color: var(--text-color-1);
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: 0.3s;
+}
+.header-section .header-slider .content a i {
+  margin-left: 5px;
+}
+.header-section .header-slider .content a:hover {
+  background-color: var(--text-color-1);
+  color: white;
+}
+/* slider customiztion */
+.header-slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  background: var(--main-color);
+  padding: 4px 8px;
+  z-index: 1;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: white;
+}
+.header-slider .arrow-prev {
+  left: 55px;
+}
+.header-slider .arrow-next {
+  right: 55px;
+}
+.header-slider:hover .slick-arrow {
+  opacity: 1;
+}
+.header-slider .slick-arrow:hover {
+  background: rgb(247, 241, 241);
+  color: var(--main-color);
+}
+.header-slider:hover .arrow-prev {
+  left: 15px;
+}
+.header-slider:hover .arrow-next {
+  right: 15px;
+}
+/* end slider customiztion */
+
+.header-section .side-imgs {
+  flex: 1;
+}
+.header-section .side-imgs .img-box {
+  width: 100%;
+  height: 190px;
+}
+.header-section .side-imgs .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1120px) {
+  .header-section .side-imgs {
+    display: none;
+  }
+}
+.header-section .header-slider,
+.header-section .side-imgs {
+  opacity: 0;
+  animation: fadein 0.2s linear forwards;
+}
+/* end header section */
+/* Start brands section */
+.brands-section {
+  padding-bottom: 10px;
+  direction: ltr;
+  background-color: white;
+}
+.brands-section .brand-item {
+  text-align: center;
+  display: block;
+}
+.brands-section .brand-item img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin: auto;
+  background-color: #eee;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+.brands-section .brand-item:hover img {
+  transform: scale(1.2);
+}
+.brands-section .brand-item h2 {
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  color: var(--text-color-1);
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.brands-section .brand-item:hover h2 {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+/* End brands section */
+/* Start recipes section */
+.recipes-section {
+  margin-top: var(--section-padding);
+}
+.recipes-section ul {
+  margin-top: 20px;
+  direction: ltr;
+}
+.recipes-section ul li {
+  direction: rtl;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 0 5px;
+}
+.recipes-section ul li .head,
+.recipes-section ul li .footer {
+  background: rgba(87, 87, 87, 0.765);
+  transition: all 0.3s;
+  color: white;
+}
+.recipes-section ul li .head {
+  text-align: center;
+  padding: 10px 15px;
+}
+.recipes-section ul li .head .ratings {
+  margin: auto;
+}
+.recipes-section ul li .head h2 {
+  font-size: 20px;
+}
+.recipes-section ul li .img-box {
+  overflow: hidden;
+  height: 200px;
+}
+.recipes-section ul li img {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+.recipes-section ul li:hover img {
+  transform: scale(1.1);
+}
+.recipes-section ul li .footer {
+  padding: 20px;
+}
+.recipes-section ul li .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(248, 209, 179, 0.7);
+  transition: all 0.3s;
+  z-index: 1;
+  opacity: 0;
+}
+.recipes-section ul li:hover .overlay {
+  opacity: 1;
+}
+.recipes-section ul li .overlay > * {
+  margin-top: 50px;
+  transition: 0.3s;
+}
+.recipes-section ul li:hover .overlay > * {
+  margin-top: 0;
+}
+.recipes-section ul li .overlay p {
+  color: white;
+  text-align: center;
+}
+.recipes-section ul li .overlay .actions {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 10px;
+}
+.recipes-section ul li .overlay .actions > * {
+  padding: 8px;
+  background-color: var(--main-color);
+  border: 1px solid white;
+  color: white;
+  border-radius: 6px;
+}
+/* slider customization */
+.recipes-section .slick-prev,
+.recipes-section .slick-next {
+  top: -60px;
+  color: var(--green);
+  background: #ffffff;
+  border: 1px solid var(--green);
+  width: 30px;
+  height: 30px;
+  padding: 5px 8px;
+  z-index: 1;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+.recipes-section .slick-prev::before,
+.recipes-section .slick-next::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--green);
+}
+.recipes-section .slick-prev {
+  left: calc(100% - 120px);
+  left: 40px;
+}
+.recipes-section .slick-prev::before {
+  content: "\f104";
+}
+.recipes-section .slick-next::before {
+  content: "\f105";
+}
+.recipes-section .slick-next {
+  right: 45px;
+  left: 90px;
+}
+/* End recipes section */
+/* Start user section */
+.rigster-section {
+  background-image: url(./../../images/burger-sandwich-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: var(--section-padding);
+  margin-bottom: var(--section-padding);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.rigster-section .mycontainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 20px;
+}
+@media (max-width: 1120px) {
+  .rigster-section.user .mycontainer {
+    flex-direction: column-reverse;
+  }
+  .rigster-section.rest .mycontainer {
+    flex-direction: column;
+  }
+}
+.rigster-section h2 {
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  color: var(--main-color);
+  font-size: 40px;
+  text-align: center;
+}
+.rigster-section p {
+  color: #666;
+  word-spacing: 2px;
+  line-height: 2;
+  margin-block: 25px;
+  font-weight: bold;
+  padding: 30px;
+  background-color: rgba(248, 209, 179, 0.7);
+  position: relative;
+}
+.rigster-section p::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  top: 10px;
+  left: 10px;
+  border: 2px solid rgb(248, 209, 179);
+}
+.rigster-section img {
+  width: 500px;
+  max-width: 100%;
+}
+.rigster-section a {
+  display: block;
+  margin: auto;
+  width: fit-content;
+  border-radius: 10px;
+  background-color: var(--third-color);
+  border: none;
+  color: var(--main-color);
+  padding: 10px 20px;
+  box-shadow: rgba(249, 124, 34, 0.4) 5px 5px;
+  transition: 0.3s;
+}
+.rigster-section a:hover {
+  border: 1px solid var(--main-color);
+  background-color: transparent;
+  box-shadow: rgba(249, 124, 34, 0.4) 5px 5px, rgba(249, 124, 34, 0.3) 10px 10px,
+    rgba(249, 124, 34, 0.2) 15px 15px, rgba(249, 124, 34, 0.1) 20px 20px,
+    rgba(249, 124, 34, 0.05) 25px 25px;
+}
+/* End user section */
+/* Start sales section */
+.sales-section {
+  margin-bottom: var(--section-padding);
+}
+.sales-section ul {
+  margin: 10px 0;
+  padding: 50px 20px;
+  background-color: white;
+  background-image: url(./../../images/burger-sandwich-bg.jpg);
+  background-size: cover;
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.sales-section ul li {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  transition: 0.4s;
+  margin: auto;
+  background-color: white;
+}
+.sales-section ul li:hover {
+  border-radius: 20px;
+  height: 320px;
+  margin-top: 20px;
+}
+.sales-section ul li .content {
+  padding: 0px 10px 20px;
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+.sales-section ul li .content .price {
+  text-align: center;
+}
+.sales-section ul li .content .price span:first-child {
+  color: var(--sec-color);
+  font-weight: bold;
+  font-size: 20px;
+}
+.sales-section ul li .content .price span:last-child {
+  color: var(--main-color);
+  font-size: 15px;
+  text-decoration: line-through;
+}
+.sales-section ul li:hover .content {
+  top: 55%;
+  height: 160px;
+  opacity: 1;
+}
+.sales-section ul li .content p {
+  font-size: 13px;
+  color: #777;
+  text-align: center;
+  margin: 0 0 10px;
+  max-height: 35px;
+  overflow: hidden;
+}
+.sales-section ul li .content a {
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+.sales-section ul li .content a:hover {
+  color: var(--main-color);
+}
+.sales-section ul li .content a span {
+  padding: 2px 4px;
+  color: var(--main-color);
+  border-radius: 3px;
+}
+.sales-section ul li .content a i {
+  color: var(--sec-color);
+}
+.sales-section ul li .content a:hover i {
+  animation: bouncing 1s infinite linear;
+}
+@keyframes bouncing {
+  40%,
+  60% {
+    transform: translateX(-5px);
+  }
+  20%,
+  50%,
+  80% {
+    transform: translateX(0);
+  }
+}
+.sales-section ul li img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  transition: 0.4s;
+}
+.sales-section ul li:hover img {
+  border-radius: 20px;
+  margin-top: -180px;
+}
+/* End sales section */

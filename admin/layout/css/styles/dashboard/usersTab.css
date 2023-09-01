@@ -1,0 +1,106 @@
+.rests-content .statics {
+}
+.rests-content .statics .colmn-1 {
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rests-content .statics .pie-chart {
+  background: radial-gradient(
+      circle closest-side,
+      var(--graysh-color) 0 70%,
+      transparent 70% 85%,
+      var(--graysh-color) 0
+    ),
+    conic-gradient(
+      from 0deg,
+      var(--teal-color) 0,
+      var(--teal-color) var(--p1),
+      var(--orangy-color) 0,
+      var(--orangy-color) 100%
+    );
+  position: relative;
+  width: 200px;
+  min-height: 230px;
+  /* animation rules */
+  transform: translateY(10px);
+  opacity: 0.5;
+  animation: fadeIn 1s linear forwards;
+  position: relative;
+}
+
+.rests-content .statics .inner-caption {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pie-chart span:nth-child(1)::before {
+  background-color: var(--teal-color);
+}
+.pie-chart span:nth-child(2)::before {
+  background-color: var(--orangy-color);
+}
+.info-row-container img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+#rests-accounts-table img.info-col {
+  flex: 0;
+}
+#rests-accounts-table .info-col.last > div span {
+  margin: 0 40px;
+}
+#rests-accounts-table .info-col.last > div span:last-child {
+  float: left;
+}
+
+#filter-rests-table form {
+  position: relative;
+  margin: 0;
+}
+#filter-rests-table form input {
+  font-size: 14px;
+  color: #777;
+  padding: 5px 60px 5px 10px;
+  border: 1px solid var(--ligth-green-color);
+  box-shadow: 2px 1px var(--ligth-green-color);
+  transition: 0.3s;
+}
+#filter-rests-table form input:hover,
+#filter-rests-table form input:focus {
+  box-shadow: none;
+}
+#filter-rests-table form input::placeholder {
+  transition: 0.3s;
+}
+#filter-rests-table form input:focus::placeholder {
+  opacity: 0;
+}
+@media (max-width: 767px) {
+  #filter-rests-table form input {
+    width: 100%;
+  }
+}
+#filter-rests-table form button {
+  position: absolute;
+  background-color: var(--graysh-color);
+  border: none;
+  color: white;
+  height: 95%;
+  top: 1px;
+  right: 1px;
+  width: 50px;
+  transition: 0.3s;
+}
+#filter-rests-table form button:hover {
+  background-color: var(--teal-color);
+}

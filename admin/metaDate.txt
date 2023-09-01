@@ -1,0 +1,196 @@
+INSERT INTO `restaurant` (`id`, `name`, `email`, `phone`, `password`, `description`, `open_time`, `close_time`, `delivery_service`, `reserv_service`, `fast_food`, `profile_image`, `cover_image`, `created_at`, `account_status`, `verify_token`, `authentication_files`) 
+VALUES (NULL, 'hagob', 'hagob@gmail.com', '0993456789', SHA1('123'), '', '11:00:00', '23:00:00', '1', '0', '1', '', '', current_timestamp(), '2', '', '');
+
+
+INSERT INTO `restaurant` (`id`, `name`, `email`, `phone`, `password`, `description`, `open_time`, `close_time`, `delivery_service`, `reserv_service`, `fast_food`, `profile_image`, `cover_image`, `created_at`, `account_status`, `verify_token`, `authentication_files`)
+ VALUES (NULL, 'القمة', 'top@gmail.com', '0993456789', SHA1('123'), '', '11:00:00', '23:00:00', '0', '1', '0', '', '', current_timestamp(), '2', '', '');
+
+
+INSERT INTO `restaurant` (`id`, `name`, `email`, `phone`, `password`, `description`, `open_time`, `close_time`, `delivery_service`, `reserv_service`, `fast_food`, `profile_image`, `cover_image`, `created_at`, `account_status`, `verify_token`, `authentication_files`)
+ VALUES (NULL, 'فلافلنا', 'flafel@gmail.com', '0993456789', SHA1('123'), '', '11:00:00', '23:00:00', '1', '0', '1', '', '', current_timestamp(), '2', '', '');
+
+
+INSERT INTO `restaurant` (`id`, `name`, `email`, `phone`, `password`, `description`, `open_time`, `close_time`, `delivery_service`, `reserv_service`, `fast_food`, `profile_image`, `cover_image`, `created_at`, `account_status`, `verify_token`, `authentication_files`)
+ VALUES (NULL, 'بركات', 'barakat@gmail.com', '0993456789', SHA1('123'), '', '11:00:00', '23:00:00', '1', '0', '1', '', '', current_timestamp(), '2', '', '');
+
+
+INSERT INTO `restaurant` (`id`, `name`, `email`, `phone`, `password`, `description`, `open_time`, `close_time`, `delivery_service`, `reserv_service`, `fast_food`, `profile_image`, `cover_image`, `created_at`, `account_status`, `verify_token`, `authentication_files`)
+ VALUES (NULL, 'النقار', 'nakkar@gmail.com', '0993456789', SHA1('123'), '', '11:00:00', '23:00:00', '1', '0', '1', '', '', current_timestamp(), '2', '', '');
+
+
+INSERT INTO `restaurant` (`id`, `name`, `email`, `phone`, `password`, `description`, `open_time`, `close_time`, `delivery_service`, `reserv_service`, `fast_food`, `profile_image`, `cover_image`, `created_at`, `account_status`, `verify_token`, `authentication_files`)
+ VALUES (NULL, 'شتورة', 'shtora@gmail.com', '0993456789', SHA1('123'), '', '11:00:00', '23:00:00', '1', '0', '1', '', '', current_timestamp(), '2', '', '');
+
+
+INSERT INTO `restaurant` (`id`, `name`, `email`, `phone`, `password`, `description`, `open_time`, `close_time`, `delivery_service`, `reserv_service`, `fast_food`, `profile_image`, `cover_image`, `created_at`, `account_status`, `verify_token`, `authentication_files`)
+ VALUES (NULL, 'test', 'test@gmail.com', '0993456789', SHA1('123'), '', '11:00:00', '23:00:00', '1', '0', '1', '', '', current_timestamp(), '2', '', '');
+
+
+INSERT INTO `address` (`Id`, `restaurant_id`, `street`, `region`, `state`) VALUES (NULL, '48', 'جانب جامع الصديق', 'الجميلية', '3');
+
+INSERT INTO `address` (`Id`, `restaurant_id`, `street`, `region`, `state`) VALUES (NULL, '49', 'جانب الساعة', 'باب فرج', '3');
+
+INSERT INTO `address` (`Id`, `restaurant_id`, `street`, `region`, `state`) VALUES (NULL, '50', 'جانب جامع الصديق', 'الجميلية', '3');
+
+INSERT INTO `address` (`Id`, `restaurant_id`, `street`, `region`, `state`) VALUES (NULL, '51', 'جانب جامع الصديق', 'الجميلية', '3');
+
+INSERT INTO `address` (`Id`, `restaurant_id`, `street`, `region`, `state`) VALUES (NULL, '52', 'جانب جامع الصديق', 'الجميلية', '3');
+
+INSERT INTO `address` (`Id`, `restaurant_id`, `street`, `region`, `state`) VALUES (NULL, '53', 'جانب جامع الصديق', 'الجميلية', '5');
+
+INSERT INTO `address` (`Id`, `restaurant_id`, `street`, `region`, `state`) VALUES (NULL, '53', 'جانب جامع الصديق', 'الجميلية', '3');
+
+
+/////////////////////////
+ad_type table:
+--------------
+INSERT INTO ad_type(name) VALUES ("إعلان للمطعم");
+INSERT INTO ad_type(name) VALUES ("إعلان لوجبة");
+INSERT INTO ad_type(name) VALUES ("إعلان لعرض على وجبة");
+INSERT INTO ad_type(name) VALUES ("إعلان لفرع جديد");
+INSERT INTO ad_type(name) VALUES ("إعلان لخدمة جديدة");
+/////////////////////////
+
+////////////////////////
+customer table:
+---------------
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Ahmed', 'Ahmed@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');
+
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Manal', 'manal@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');
+
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Rami', 'rami@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');
+
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Abdoullah', 'abdoullah@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');
+
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Jamal', 'jamal@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');
+
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Hamzah', 'hamzah@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');
+
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Hoseen', 'hoseen@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');
+
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Ali', 'ali@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');
+
+
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Kamal Ali', 'Kamal@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');SELECT * FROM `customer` WHERE 1;
+
+
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Sami Ahmed', 'sami@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');SELECT * FROM `customer` WHERE 1;
+
+
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Daoud Deep', 'daoud@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');SELECT * FROM `customer` WHERE 1;
+
+
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Ahmed Ahmed', 'aa2000@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');SELECT * FROM `customer` WHERE 1;
+
+
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Zaid Homsi', 'zaid@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');SELECT * FROM `customer` WHERE 1;
+
+
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Omar Kurdi', 'omar@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');SELECT * FROM `customer` WHERE 1;
+
+
+INSERT INTO `customer` (`id`, `name`, `email`, `phone`, `password`, `image`, `is_admin`, `created_at`, `address`, `verify_token`, `account_status`) VALUES (NULL, 'Asmaa Ali', 'asmaa@gmail.com', '0912345678', SHA1('123'), '', '0', current_timestamp(), '', '', '1');SELECT * FROM `customer` WHERE 1;
+////////////////////////
+
+
+///////////////////////
+order_ tabl:
+------------
+******** start order
+INSERT INTO `order_` (`id`, `customer_id`, `order_date`, `address`, `order_status`, `phone`, `notes`) VALUES (NULL, '27', current_timestamp(), 'حلب الاسماعيلية جانب زكي باشا', '', '0912345678', '');
+
+>>>>>>>> insetred id = 16
+
+INSERT INTO `order_item` (`id`, `order_id`, `recipe_id`, `quantity`) VALUES (NULL, '16', '2', '2');
+INSERT INTO `order_item` (`id`, `order_id`, `recipe_id`, `quantity`) VALUES (NULL, '16', '3', '1');
+
+******** end order
+
+******** start order
+INSERT INTO `order_` (`id`, `customer_id`, `order_date`, `address`, `order_status`, `phone`, `notes`) VALUES (NULL, '28', current_timestamp(), 'حلب الاسماعيلية جانب زكي باشا', '', '0912345678', '');
+
+>>>>>>>> insetred id = 17
+
+INSERT INTO `order_item` (`id`, `order_id`, `recipe_id`, `quantity`) VALUES (NULL, '17', '2', '4');
+INSERT INTO `order_item` (`id`, `order_id`, `recipe_id`, `quantity`) VALUES (NULL, '17', '3', '2');
+
+******** end order
+
+******** start order
+INSERT INTO `order_` (`id`, `customer_id`, `order_date`, `address`, `order_status`, `phone`, `notes`) VALUES (NULL, '29', current_timestamp(), 'حلب الاسماعيلية جانب زكي باشا', '', '0912345678', '');
+
+>>>>>>>> insetred id = 18
+
+INSERT INTO `order_item` (`id`, `order_id`, `recipe_id`, `quantity`) VALUES (NULL, '18', '1', '3');
+INSERT INTO `order_item` (`id`, `order_id`, `recipe_id`, `quantity`) VALUES (NULL, '18', '2', '2');
+
+******** end order
+
+///////////////////////
+///////////////////////
+order_ status:
+------------
+INSERT INTO `order_status` (`id`, `status`) VALUES (NULL, 'معلق'), (NULL, 'مقبول');
+INSERT INTO `order_status` (`id`, `status`) VALUES (NULL, 'جاهز'), (NULL, 'مرفوض');
+INSERT INTO `order_status` (`id`, `status`) VALUES (NULL, 'مُسلم'), (NULL, 'ملغي');
+
+///////////////////////
+///////////////////////
+reservation_status:
+------------
+
+INSERT INTO `reservation_status` (`id`, `status`) VALUES (NULL, 'معلق'), (NULL, 'مرفوض');
+INSERT INTO `reservation_status` (`id`, `status`) VALUES (NULL, 'مؤكد'), (NULL, 'منقضي');
+INSERT INTO `reservation_status` (`id`, `status`) VALUES (NULL, 'ملغي');
+
+///////////////////////
+///////////////////////
+restaurant_reviews:
+------------
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '81', '27', 'رائع..!', '4', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '82', '27', 'رائع..!', '5', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '81', '31', '', '3', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '82', '31', '', '4', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '81', '26', 'لا يعلى عليه، بس آخر فترة الأسعار ارتفعت  زيادة', '3', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '82', '26', '', '4', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '52', '25', 'رقم واحد بسوريا..', '5', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '81', '24', '', '2', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '82', '24', '', '3', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '51', '28', '', '4', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '82', '30', 'رقم واحد للحلو الأصلي العريق', '5', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '83', '24', '', '5', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '83', '26', '', '4', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '83', '27', 'رائع..!', '5', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '83', '31', '', '3', current_timestamp());
+
+INSERT INTO `restaurant_reviews` (`id`, `restaurant_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '1', '30', '', '4', current_timestamp());
+
+///////////////////////
+///////////////////////
+recipe_reviews:
+------------
+INSERT INTO `recipe_reviews` (`id`, `recipe_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '33', '29', '', '4', current_timestamp());
+
+INSERT INTO `recipe_reviews` (`id`, `recipe_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '32', '25', 'أطيب من هيك ماضل', '5', current_timestamp());
+
+INSERT INTO `recipe_reviews` (`id`, `recipe_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '32', '30', 'شي طيب', '4', current_timestamp());
+
+INSERT INTO `recipe_reviews` (`id`, `recipe_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '32', '31', '', '5', current_timestamp());
+
+INSERT INTO `recipe_reviews` (`id`, `recipe_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '33', '24', '', '2', current_timestamp());
+
+INSERT INTO `recipe_reviews` (`id`, `recipe_id`, `customer_id`, `review`, `rate`, `added_at`) VALUES (NULL, '21', '28', '', '4', current_timestamp());

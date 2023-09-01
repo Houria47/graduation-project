@@ -1,0 +1,349 @@
+.order-page {
+  background: url("./../../images/burger-sandwich-bg.jpg");
+  background-size: cover;
+}
+.order-page .mycontainer {
+  padding-top: 30px;
+  padding-bottom: 100px;
+  min-height: calc(100vh - var(--nav-height));
+}
+@media (min-width: 922px) {
+  .order-page .mycontainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+}
+.order-page section {
+  flex: 1;
+}
+.order-page .box {
+  background-color: white;
+  border: 1px solid #eee;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    var(--main-color-trans) 0px 1px 3px -1px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.order-page .my-title {
+  font-size: 20px;
+  color: var(--text-color-1);
+  margin-bottom: 20px;
+}
+.order-page .order-list .box {
+  max-height: 300px;
+  overflow-y: auto;
+}
+.order-page .order-list table {
+  font-size: 0.9rem;
+  width: 100%;
+}
+.order-page .order-list table tr {
+  transition: 0.3s;
+}
+.order-page .order-list table tr:focus-within,
+.order-page .order-list table tr:hover {
+  background-color: #f9f9f9;
+}
+.order-page .order-list table th {
+  padding: 5px 10px;
+  color: #666;
+}
+.order-page .order-list table tr:not(:last-child) td {
+  border-bottom: 1px solid #eee;
+}
+.order-page .order-list table td {
+  color: #777;
+}
+.order-page .order-list table td:not(:first-child) {
+  padding: 0 10px;
+}
+/* .order-page .order-list table td .img-box {
+  position: relative;
+}
+.order-page .order-list table td .img-box::before {
+  content: "\f1f8";
+  font-family: var(--fa-style-family-classic);
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--orang);
+  cursor: pointer;
+  position: absolute;
+  background-color: rgba(0 0 0 / 50%);
+  opacity: 0;
+  transition: 0.3s;
+}
+.order-page .order-list table tr:hover .img-box::before {
+  opacity: 1;
+} */
+
+.order-page .order-list table td img {
+  width: 50px;
+  height: 50px;
+}
+.order-page .order-list table td h3 {
+  font-size: 1rem;
+  margin-right: 10px;
+  display: inline-block;
+}
+.order-page .order-list table td input {
+  width: 50px;
+  color: inherit;
+  border: 1px solid transparent;
+  outline: none;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.order-page .order-list table td input:focus,
+.order-page .order-list table tr:hover td input {
+  border: 1px solid var(--sec-color);
+}
+.order-page .order-list table :is(td, th):not(:nth-child(2)) {
+  text-align: center;
+  width: 0;
+  white-space: nowrap;
+}
+.order-page .total-box > div {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.order-page .total {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+.order-page h3 {
+  color: var(--text-color-1);
+  font-size: inherit;
+  display: inline-block;
+  min-width: 110px;
+}
+.order-page span {
+  margin-right: 5px;
+}
+.order-page span.num {
+  color: var(--main-color);
+  font-weight: bold;
+}
+.order-page .unit {
+  font-size: 12px;
+  font-style: italic;
+  margin: 0;
+}
+/* start info form */
+.order-page .customer-info {
+  display: flex;
+  flex-direction: column;
+}
+.order-page .customer-info .box {
+  flex: 1;
+}
+.order-page .input {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 10px;
+}
+@media (max-width: 767px) {
+  .order-page .input {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5px;
+  }
+}
+.order-page .input label {
+  min-width: 90px;
+}
+.order-page .input input,
+.order-page .input textarea {
+  flex: 1;
+  border: 1px solid #eee;
+  padding: 5px 10px;
+  transition: 0.3s;
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .order-page .input input,
+  .order-page .input textarea {
+    width: 100%;
+  }
+  .order-page .input label {
+    margin-bottom: 10px;
+  }
+}
+.order-page .input small {
+  margin-right: 100px;
+  padding-block: 5px;
+  height: 30px;
+  width: 100%;
+  color: var(--orang);
+  font-size: 12px;
+}
+
+@media (max-width: 767px) {
+  .order-page .input small {
+    margin: 0;
+  }
+}
+.order-page .input.invalid :is(input, textarea) {
+  border-color: var(--orang);
+}
+.order-page .input:not(.invalid) :is(input, textarea):hover,
+.order-page .input:not(.invalid) :is(input, textarea):focus {
+  border-color: var(--sec-color);
+}
+.order-page button {
+  width: 100%;
+  border: 1px solid var(--text-color-1);
+  color: white;
+  font-weight: bold;
+  background-color: var(--text-color-1);
+  padding: 10px;
+  transition: 0.3s;
+}
+.order-page button:hover {
+  background-color: white;
+  color: var(--text-color-1);
+}
+
+/* Start no orders case section */
+.order-page .no-orders {
+  height: calc(100vh - var(--nav-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.order-page .no-orders p {
+  margin-bottom: 50px;
+}
+.order-page .no-orders a {
+  padding: 10px;
+  background-color: var(--sec-color);
+  transition: 0.3s;
+  color: white;
+}
+.order-page .no-orders a:hover {
+  filter: brightness(1.2);
+}
+/* End no orders case section */
+/* Start checkout */
+.order-page .checkout {
+  height: calc(100vh - var(--nav-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 50px auto;
+}
+.order-page .checkout h2.my-title {
+  text-align: center;
+  color: var(--sec-color);
+  font-weight: bold;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: rgba(255 255 255 / 50%);
+  width: 100%;
+  box-shadow: 0 0 5px #27ae5f63;
+}
+.order-page .checkout.has-error h2.my-title {
+  box-shadow: 0 0 5px var(--main-color-trans);
+  color: var(--main-color);
+}
+.order-page .checkout .box {
+  font-size: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.order-page .checkout .order-info > div {
+  display: flex;
+}
+.order-page .checkout .order-info > div span:first-child,
+.order-page .checkout .order-total > div > span:first-child,
+.order-page .checkout h3 {
+  min-width: 80px;
+  font-weight: bold;
+  color: #666;
+}
+.order-page .checkout .order-info > div span:last-child {
+  color: #777;
+  flex: 1;
+}
+
+.order-page .checkout table {
+  font-size: 0.9rem;
+  width: 100%;
+}
+.order-page .checkout table tr {
+  transition: 0.3s;
+}
+.order-page .checkout table th {
+  padding: 5px 10px;
+  color: #666;
+}
+.order-page .checkout table tr:not(:last-child) td {
+  border-bottom: 1px solid #eee;
+}
+.order-page .checkout table td {
+  color: #777;
+}
+.order-page .checkout table td:not(:first-child) {
+  padding: 0 10px;
+}
+.order-page .checkout table td img {
+  width: 30px;
+  height: 30px;
+}
+.order-page .checkout table td h3 {
+  font-size: 1rem;
+  margin-right: 10px;
+  display: inline-block;
+}
+.order-page .checkout table td input {
+  width: 50px;
+  color: inherit;
+  border: 1px solid transparent;
+  outline: none;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.order-page .checkout table :is(td, th):not(:nth-child(2)) {
+  text-align: center;
+  width: 0;
+  white-space: nowrap;
+}
+.order-total {
+  width: 100%;
+}
+.order-total .unit {
+  margin-right: 5px;
+}
+.order-page .checkout .order-total > div:first-child {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+.order-page .checkout .order-total > div span:last-child {
+  color: #777;
+}
+.order-page .checkout a {
+  font-size: 14px;
+  padding: 10px;
+  color: white;
+  background-color: var(--text-color-1);
+  transition: 0.3s;
+}
+.order-page .checkout a:hover {
+  filter: brightness(1.3);
+}
+/* End checkout */

@@ -1,0 +1,45 @@
+{
+    "todo-tree.highlights.customHighlight": {
+        "NOTE":{
+            "background": "white",
+            "foreground": "#ab0740",
+            "type": "tag-and-comment",
+        },
+        "TODO": {
+            "icon": "check",
+            "type": "tag-and-comment",
+            "background": "green",
+            "foreground": "white"
+        },
+        "BUG": {
+            "icon": "bug",
+            "background": "red",
+            "foreground": "white",
+            "type": "tag-and-comment",
+        },
+        "HACK": {
+            "icon": "tools",
+            "type": "tag-and-comment",
+        },
+        "FIXME": {
+            "icon": "flame",
+            "background": "yellow",
+            "foreground": "black",
+            "type": "tag-and-comment",
+        },
+        "XXX": {
+            "icon": "$(close)",
+            "type": "tag-and-comment",
+        }
+    },
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]",
+        "NOTE"
+    ]
+}

@@ -1,0 +1,1 @@
+ملف ال images اللي هون خاص ب jquery-ui.css

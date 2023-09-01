@@ -1,0 +1,279 @@
+.statics-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.statics-section .ele {
+  flex: 1;
+  max-width: 100%;
+}
+.statics-section .pie-card {
+  min-width: 250px;
+  text-align: center;
+}
+.statics-section .caption h3 {
+  font-size: 20px;
+  color: var(--teal-color);
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.statics-section .caption .nums {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .statics-section .caption .nums {
+    justify-content: center;
+  }
+}
+.statics-section .caption .nums > div {
+  text-align: center;
+}
+.statics-section .caption span {
+  font-size: 18px;
+  font-weight: bold;
+}
+.statics-section .caption span::before {
+  display: inline-block;
+  content: attr(data-percentage);
+  text-align: center;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 0.5em;
+  font-size: 0.9em;
+}
+.statics-section .caption i {
+  margin-left: 5px;
+  font-size: 28px;
+}
+.statics-section .caption .users span::before {
+  background-color: var(--teal-color);
+}
+.statics-section .caption .users i {
+  color: var(--teal-color);
+}
+.statics-section .caption .rests span::before {
+  background-color: var(--orangy-color);
+}
+.statics-section .caption .rests i {
+  color: var(--orangy-color);
+}
+.statics-section .caption .num {
+  color: var(--teal-color);
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 45px;
+}
+
+.settings {
+  margin-top: 30px;
+}
+main .settings .component-title {
+  margin-bottom: 30px;
+}
+.settings .set {
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+.settings .two-set {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.two-set > .set {
+  flex: 1 1 300px;
+  margin: 20px 0 0 0;
+}
+.settings .set:hover {
+  border-color: var(--ligth-green-color);
+}
+.settings .set .set-title {
+  padding: 10px 10px;
+  margin: -40px 0 0;
+  font-size: 15px;
+  color: var(--teal-color);
+  width: fit-content;
+  background-color: white;
+}
+.settings .set .data {
+  flex: 1;
+}
+.settings .set .data,
+.settings .set i {
+  font-size: 15px;
+  color: #777;
+  transition: 0.3s;
+}
+.settings .set .data p {
+  margin: 0;
+}
+.settings small {
+  color: var(--orangy-color);
+  font-size: 13px;
+}
+.settings input {
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  pointer-events: none;
+}
+.settings input.active {
+  pointer-events: all;
+}
+.settings .set input:focus {
+  outline: none;
+}
+.settings .set .actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.settings .set i {
+  cursor: pointer;
+}
+.settings .set i:hover {
+  color: var(--orangy-color);
+}
+.settings .set i:hover {
+  color: var(--orangy-color);
+}
+.settings .set i.x:hover,
+.settings .set i.x {
+  color: red;
+}
+.settings .set i.y,
+.settings .set i.y:hover {
+  color: green;
+}
+.settings .set #adTypesList li,
+.settings .set li form {
+  padding: 5px 10px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  margin: 0;
+}
+.settings .set li:hover,
+.settings .set #adTypesList li:hover {
+  background-color: var(--graysh-color);
+}
+.settings .set #adTypesList li:focus-within {
+  background-color: var(--ligth-green-color);
+  color: white;
+}
+.settings .set li:not(:last-child) {
+  border-bottom: 1px solid var(--graysh-color);
+}
+.used-num {
+  display: inline-block;
+  text-align: center;
+  min-width: 30px;
+}
+.settings .set li img {
+  width: 25px;
+  height: 25px;
+  background-color: var(--graysh-color);
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.settings .set li label,
+.addForm .file-btn {
+  background-color: var(--teal-color);
+  color: #fff;
+  transition: 0.3s;
+  padding: 3px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid var(--teal-color);
+}
+.settings .set li input:not(.active) ~ label {
+  display: none;
+}
+.settings .set button {
+  background-color: var(--teal-color);
+  color: white;
+  border: 1px solid var(--teal-color);
+  border-radius: 6px;
+  padding: 3px 10px;
+  transition: 0.3s;
+}
+.settings .set .set-btn {
+  display: block;
+  width: fit-content;
+  margin-right: auto;
+  margin-top: 15px;
+}
+.settings .set button:hover,
+.addForm .file-btn:hover {
+  background-color: white;
+  color: var(--teal-color);
+}
+.addForm {
+  margin-top: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 10px;
+  border-radius: 6px;
+}
+.addForm label {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--orangy-color);
+}
+
+.addForm .input {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-bottom: 2px solid #ccc;
+  margin-top: 5px;
+}
+.addForm.invalid .input {
+  border-color: var(--orangy-color);
+}
+.addForm input,
+.addForm input {
+  width: 100%;
+  pointer-events: all;
+}
+.addForm button {
+  background-color: var(--ligth-green-color);
+  color: var(--teal-color);
+  border-radius: 6px;
+  border: none;
+}
+.addForm button:hover {
+  background-color: var(--teal-color);
+  color: #fff;
+}
+#newReactIconImg {
+  width: 27px;
+  height: 27px;
+  background-color: var(--graysh-color);
+  border-radius: 50%;
+  border: 2px solid var(--teal-color);
+}
+/* modal */
+.popup-overlay form input {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+}
+.popup-overlay form small {
+  font-size: 13;
+  color: var(--main-color);
+  display: block;
+  margin-top: 10px;
+}

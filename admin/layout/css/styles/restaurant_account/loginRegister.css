@@ -1,0 +1,238 @@
+/* ***************************** */
+/** Start Login & Register Pages */
+/* ***************************** */
+
+.popup-box .img-confitte {
+  width: 350px;
+  margin-top: -90px;
+}
+.popup-box h2 {
+  margin-top: 10px;
+  text-align: center;
+  color: var(--green);
+  font-weight: 600;
+  font-size: 28px;
+}
+.popup-box img {
+  height: 150px;
+  margin-block: 10px;
+  display: block;
+  margin: auto;
+}
+.popup-box p {
+  color: var(--black);
+  font-size: 16px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 350px;
+}
+.popup-box a {
+  display: block;
+  width: fit-content;
+  padding: 10px;
+  background-color: var(--orang);
+  border-radius: 10px;
+  color: #fff;
+  border: 1px solid var(--orang);
+  margin: 30px auto;
+  transition: var(--main-transition-duration);
+}
+.popup-box a:hover {
+  background-color: #fff;
+  color: orange;
+}
+/* Start Login customization */
+.log-page > div {
+  width: 400px;
+}
+@media (max-width: 767px) {
+  .log-page > div {
+    width: 100%;
+  }
+}
+/* End Login customization */
+.log-reg-page {
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
+}
+.log-reg-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url("../../../images/light-green-bg.jpg");
+  filter: blur(8px);
+  /* NOTE: add webkit rule-webkit-filter: blur(8px); */
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.log-reg-page a {
+  color: var(--orang);
+}
+.log-reg-page > div {
+  overflow: hidden;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.11);
+}
+@media (max-width: 768px) {
+  .log-reg-page {
+    padding: 0 8px;
+  }
+}
+@media (min-width: 768px) {
+  .log-reg-page .container {
+    max-width: 960px;
+  }
+}
+/** Header */
+.log-reg-page .head {
+  background-image: url("../../../images/img40.jpg");
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (min-width: 767px) {
+  .log-reg-page .head {
+    height: 150px;
+  }
+}
+/** Content */
+@media (max-width: 767px) {
+  .log-reg-page .content {
+    padding: 15px;
+  }
+}
+.log-reg-page h2 {
+  color: var(--black);
+}
+.log-reg-page h2::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 150px;
+  background-color: var(--orang);
+  bottom: 0;
+  right: 0;
+}
+@media (max-width: 767px) {
+  .log-reg-page h2::after {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+/*** Restaurant Regester Form  */
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+  gap: 10px 20px;
+}
+.grid-form small {
+  color: #e26512;
+  font-size: 13px;
+}
+.grid-form .span-2 {
+  grid-column: 1 / -1;
+}
+.log-reg-page form .form-control:focus {
+  border-color: #ab6d0e;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(252, 134, 33, 25%);
+}
+.grid-form textarea {
+  max-height: 100px;
+}
+/**** Start Selects Customization */
+.grid-form .selectboxit-container {
+  display: block;
+}
+.grid-form .selectboxit-container .selectboxit {
+  height: 40px;
+}
+.grid-form .selectboxit-container .selectboxit-options {
+  width: 100%;
+}
+/**** End Selects Customization */
+/**** Start Radio Customization */
+.grid-form .btn-group .notActive {
+  color: var(--orang);
+  background-color: #fff;
+}
+.grid-form .btn-group .active {
+  background-color: var(--orang);
+}
+.grid-form .btn-group .btn {
+  border-color: var(--orang);
+}
+/**** End Radio Customization */
+.grid-form .radio-input label {
+  width: 120px;
+  margin-left: 80px;
+}
+@media (max-width: 767px) {
+  .grid-form .radio-input label {
+    margin-left: 40px;
+  }
+}
+.grid-form .radio-input label span.title::after {
+  transform: translate(-70%);
+}
+.grid-form input[type="time"] {
+  min-width: 150px;
+}
+.grid-form .phone-input input {
+  padding-left: 50px;
+  letter-spacing: 2px;
+}
+.grid-form .phone-input span {
+  /* For the leading 09 number of the phone */
+
+  width: 40px;
+  padding: 6px 10px;
+  background-color: #f1f1f1;
+  color: #777;
+  position: absolute;
+  left: 2px;
+  top: 1px;
+  border-radius: 6px 0 0 6px;
+}
+.grid-form small.pass-msg {
+  margin-top: -10px;
+}
+.grid-form .file-upload-btn {
+  width: 200px;
+  border: 1px solid var(--orang);
+  transition: var(--main-transition-duration);
+  cursor: pointer;
+  margin: auto;
+}
+.grid-form .file-upload-btn:hover {
+  background-color: white;
+  color: var(--orang);
+}
+.grid-form .files-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+.grid-form .files-preview .box {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+.grid-form .files-preview .box span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.grid-form .files-preview img {
+  width: 100%;
+  height: 140px;
+}
+/* ***************************** */
+/** End Login & Register Pages */
+/* ***************************** */

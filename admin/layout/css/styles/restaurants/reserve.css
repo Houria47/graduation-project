@@ -1,0 +1,504 @@
+.reserve-page {
+  background: url("./../../../images/burger-sandwich-bg.jpg");
+  background-size: cover;
+}
+.reserve-page .mycontainer {
+  padding-top: 30px;
+  padding-bottom: 100px;
+  min-height: calc(100vh - var(--nav-height));
+}
+.reserve-page .my-title {
+  font-size: 20px;
+  color: var(--text-color-1);
+  margin-bottom: 15px;
+}
+.reserve-page .box {
+  background-color: white;
+  border: 1px solid #eee;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    var(--main-color-trans) 0px 1px 3px -1px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.reserve-page .reserve-info {
+  display: flex;
+  align-items: stretch;
+  gap: 50px;
+  padding: 0;
+}
+@media (max-width: 767px) {
+  .reserve-page .reserve-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .reserve-page .reserve-info .wellcome {
+    width: 100%;
+  }
+}
+.reserve-page .reserve-info .wellcome {
+  background-image: url(./../../../images/food-table.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 350px; */
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .reserve-page .reserve-info .wellcome {
+    width: 100%;
+  }
+}
+.reserve-page .reserve-info .wellcome .content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  background-color: rgba(000 000 000 / 50%);
+  padding: 20px;
+  width: 100%;
+}
+.reserve-page .reserve-info .wellcome .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(000 000 000 / 20%);
+  z-index: 1;
+}
+
+.reserve-page .reserve-info .wellcome a {
+  font-size: 45px;
+  display: block;
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  color: var(--main-color);
+  font-weight: bold;
+  word-spacing: 5px;
+  margin: 10px 0;
+}
+.reserve-page .reserve-info .wellcome a:hover {
+  text-decoration: underline;
+}
+.reserve-page .reserve-info .wellcome p {
+  color: #eee;
+  font-size: 18px;
+  margin: 0;
+}
+.reserve-page .reserve-inputs {
+  flex: 1;
+  padding: 10px;
+}
+@media (max-width: 767px) {
+  .reserve-page .reserve-inputs {
+    width: 100%;
+  }
+}
+.reserve-page .reserve-info .input {
+  margin-top: 10px;
+}
+@media (min-width: 767px) {
+  .reserve-page .reserve-info .input {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
+.reserve-page .input input,
+.reserve-page .input textarea {
+  flex: 1;
+  width: 100%;
+  border: 1px solid #eee;
+  padding: 5px 10px;
+  transition: 0.3s;
+  color: #666;
+  font-size: 14px;
+}
+.reserve-page .input small {
+  margin-right: 10px;
+  padding-block: 5px;
+  width: 100%;
+  color: var(--orang);
+  font-size: 12px;
+}
+@media (max-width: 767px) {
+  .reserve-page .input small {
+    margin: 0;
+  }
+}
+.reserve-page .input.invalid :is(input, textarea) {
+  border-color: var(--orang);
+}
+.reserve-page .input:not(.invalid) :is(input, textarea):hover,
+.reserve-page .input:not(.invalid) :is(input, textarea):focus {
+  border-color: var(--sec-color);
+}
+.reserve-page .input label {
+  min-width: 90px;
+  margin-bottom: 5px;
+}
+/*  */
+.reserve-page .recipes-list {
+  display: flex;
+  align-items: top;
+  gap: 20px;
+  margin-top: 50px;
+}
+@media (max-width: 767px) {
+  .reserve-page .recipes-list {
+    flex-direction: column;
+  }
+}
+.reserve-page .order-now {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: var(--text-color-1);
+}
+.reserve-page .order-now img {
+  height: 150px;
+}
+.reserve-page .order-now i {
+  color: var(--main-color);
+  padding-right: 10px;
+  width: 20px;
+  animation: left-right 0.5s infinite linear;
+}
+@keyframes left-right {
+  40%,
+  60% {
+    padding-right: 0;
+  }
+  20%,
+  50%,
+  80% {
+    padding-right: 0;
+  }
+}
+.reserve-page table {
+  font-size: 0.9rem;
+  width: 100%;
+  border-top: 1px solid #ddd;
+}
+.reserve-page table tr {
+  transition: 0.3s;
+}
+.reserve-page table tbody tr:focus-within,
+.reserve-page table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+.reserve-page table th {
+  padding: 5px 10px;
+  color: #666;
+}
+.reserve-page table tr:not(:last-child) td {
+  border-bottom: 1px solid #eee;
+}
+.reserve-page table td {
+  color: #777;
+}
+.reserve-page table td:not(:first-child) {
+  padding: 0 10px;
+}
+.reserve-page table td img {
+  width: 50px;
+  height: 50px;
+}
+.reserve-page table td h3 {
+  font-size: 1rem;
+  margin-right: 10px;
+  display: inline-block;
+}
+.reserve-page table td input {
+  width: 50px;
+  color: inherit;
+  border: 1px solid transparent;
+  outline: none;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.reserve-page table td input:focus,
+.reserve-page table tr:hover td input {
+  border: 1px solid var(--sec-color);
+}
+.reserve-page table :is(td, th):not(:nth-child(2)) {
+  text-align: center;
+  width: 0;
+  white-space: nowrap;
+}
+.reserve-page .total {
+  font-size: 13px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  margin-top: 5px;
+}
+.reserve-page h3 {
+  color: var(--text-color-1);
+  font-size: inherit;
+  display: inline-block;
+  min-width: 110px;
+}
+.reserve-page span {
+  margin-right: 5px;
+}
+.reserve-page span.num {
+  color: var(--main-color);
+  font-weight: bold;
+}
+.reserve-page .recipes-list .menu {
+  flex: 1;
+}
+/* @media (min-width: 720px) { */
+.reserve-page .recipes-list .list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+/* } */
+.reserve-page .recipes-list .list .menu-title {
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  font-size: 20px;
+  color: var(--text-color-1);
+  margin: 10px;
+  text-align: center;
+  position: relative;
+  grid-column: 1 / -1;
+}
+.reserve-page .recipes-list .list .menu-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 80%;
+  background-color: var(--main-color);
+}
+.reserve-page .recipes-list .list .item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 720px) {
+  .reserve-page .recipes-list .list .item {
+    margin-bottom: 10px;
+  }
+}
+.reserve-page .recipes-list .list .item::after {
+  content: "";
+  position: absolute;
+  border: 0;
+  height: 2px;
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  background-color: var(--main-color);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.reserve-page .recipes-list .list .item:hover::after {
+  left: 0;
+  width: 100%;
+}
+.reserve-page .item .img-box {
+  width: 100%;
+  height: 190px;
+  position: relative;
+  cursor: pointer;
+}
+.reserve-page .item .check {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 0px 2px;
+  width: 25px;
+  height: 25px;
+  background-color: #f9f9f9;
+  border: 2px solid var(--main-color);
+  color: transparent;
+  border-radius: 50%;
+  transition: 0.3s;
+  z-index: 2;
+}
+.reserve-page .item:hover .check:not(.checked) {
+  transform: scale(1.1);
+  color: var(--main-color);
+}
+.reserve-page .item .check:hover:not(.checked),
+.reserve-page .item .check.checked {
+  color: white;
+  background-color: var(--main-color);
+}
+.reserve-page .item .img-box .price {
+  position: absolute;
+  bottom: -15px;
+  left: 5px;
+  width: fit-content;
+  padding: 2px 6px;
+  height: 30px;
+  background-color: var(--sec-color);
+  border-radius: 10px;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+.reserve-page .item img {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+.reserve-page .item:hover img {
+  transform: scale(1.1) translateY(-9px);
+}
+.reserve-page .item a {
+  display: block;
+  font-family: "Cairo Play", "Noto Kufi Arabic", sans-serif;
+  font-size: 22px;
+  color: var(--text-color-1);
+  margin: 15px 10px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+.reserve-page .item a:hover {
+  text-decoration: underline;
+  color: var(--sec-color);
+}
+.reserve-page button.submit-btn {
+  width: 100%;
+  background-color: var(--text-color-1);
+  color: white;
+  border: 1px solid var(--text-color-1);
+  padding: 10px;
+  transition: 0.3s;
+  margin-top: 30px;
+}
+.reserve-page button.submit-btn:hover {
+  background-color: white;
+  color: var(--text-color-1);
+}
+
+/* Start checkout */
+.reserve-page .checkout {
+  height: calc(100vh - var(--nav-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 50px auto;
+}
+.reserve-page .checkout .head {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: rgba(255 255 255 / 50%);
+  width: 100%;
+  box-shadow: 0 0 5px #27ae5f63;
+}
+.reserve-page .checkout .head h2 {
+  color: var(--sec-color);
+  font-weight: bold;
+}
+.reserve-page .checkout.has-error .head {
+  box-shadow: 0 0 5px var(--main-color-trans);
+  color: var(--main-color);
+}
+.reserve-page .checkout.has-error .head h2 {
+  color: var(--main-color);
+}
+.reserve-page .checkout .head p {
+  font-size: 14px;
+  color: #777;
+  margin: 0;
+}
+.reserve-page .checkout .box {
+  font-size: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.reserve-page .checkout .order-info > div {
+  display: flex;
+}
+.reserve-page .checkout .order-info > div span:first-child,
+.reserve-page .checkout .order-total > div > span:first-child,
+.reserve-page .checkout h3 {
+  min-width: 100px;
+  font-weight: bold;
+  color: #666;
+}
+.reserve-page .checkout .order-info > div span:last-child {
+  color: #777;
+  flex: 1;
+}
+
+.reserve-page .checkout table {
+  font-size: 0.9rem;
+  width: 100%;
+}
+.reserve-page .checkout table tr {
+  transition: 0.3s;
+}
+.reserve-page .checkout table th {
+  padding: 5px 10px;
+  color: #666;
+}
+.reserve-page .checkout table tr:not(:last-child) td {
+  border-bottom: 1px solid #eee;
+}
+.reserve-page .checkout table td {
+  color: #777;
+}
+.reserve-page .checkout table td:not(:first-child) {
+  padding: 0 10px;
+}
+.reserve-page .checkout table td img {
+  width: 30px;
+  height: 30px;
+}
+.reserve-page .checkout table td h3 {
+  font-size: 1rem;
+  margin-right: 10px;
+  display: inline-block;
+}
+.reserve-page .checkout table td input {
+  width: 50px;
+  color: inherit;
+  border: 1px solid transparent;
+  outline: none;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.reserve-page .checkout table :is(td, th):not(:nth-child(2)) {
+  text-align: center;
+  width: 0;
+  white-space: nowrap;
+}
+.reserve-page .checkout .total {
+  width: 100%;
+}
+.reserve-page .checkout .total span:last-child {
+  color: var(--main-color);
+  font-weight: bold;
+}
+.reserve-page .checkout .total .unit {
+  margin-right: 5px;
+}
+.reserve-page .checkout a {
+  font-size: 14px;
+  padding: 10px;
+  color: white;
+  background-color: var(--text-color-1);
+  transition: 0.3s;
+}
+.reserve-page .checkout a:hover {
+  filter: brightness(1.3);
+}
+/* End checkout */
